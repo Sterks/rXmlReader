@@ -1,0 +1,10 @@
+[MainSettings]
+server_connect = "127.0.0.1:8000"
+log_level = "debug"
+
+[Directory]
+root_path = "/fcs_regions"
+
+[Tasks]
+notifications = 3
+protocols = 1

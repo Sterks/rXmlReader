@@ -1,0 +1,14 @@
+[MainSettings]
+server_connect = "127.0.0.1:8000"
+log_level = "debug"
+
+[Directory]
+root_path = "/fcs_regions"
+main_folder = "./Files"
+
+[Tasks]
+notifications = 5
+protocols = 8
+
+[Rabbit]
+connection_rabbit = "amqp://guest:guest@localhost:5672/"
