@@ -69,7 +69,8 @@ func (x *XMLReader) UnzipFiles(msgs <-chan amqp.Delivery, forever chan bool) {
 
 			zipReader, err := zip.NewReader(bytes.NewReader(body), int64(len(body)))
 			if err != nil {
-				log.Fatal("Не могу прочитать содержимое файла", err)
+				log.Printf("Не могу прочитать содержимое файла", err)
+				continue
 			}
 
 			// Read all the files from zip archive
@@ -85,7 +86,7 @@ func (x *XMLReader) UnzipFiles(msgs <-chan amqp.Delivery, forever chan bool) {
 					}
 					hash := common.GetHash(zf)
 					fmt.Println(hash)
-					zf.Close()
+					_ = zf.Close()
 
 
 					zf2, err3 := zipFile.Open()

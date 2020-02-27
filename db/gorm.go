@@ -2,12 +2,12 @@ package db
 
 import (
 	"fmt"
-	model "github.com/Sterks/FReader/models"
+	model "github.com/Sterks/fReader/models"
 	"os"
 	"path/filepath"
 	"time"
 
-	"github.com/Sterks/FReader/logger"
+	"github.com/Sterks/fReader/logger"
 	"github.com/Sterks/rXmlReader/config"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres" //....
