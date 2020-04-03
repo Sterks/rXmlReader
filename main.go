@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/BurntSushi/toml"
-	"github.com/Sterks/rXmlReader/amqp"
+	"github.com/Sterks/rXmlReader/rabbit"
 	"github.com/Sterks/rXmlReader/config"
 	"github.com/Sterks/rXmlReader/services"
 	"github.com/sirupsen/logrus"
@@ -33,10 +33,8 @@ func main() {
 		log.Println(err)
 	}
 
-	consumer := amqp.NewConsumer(config)
-	consumer.ConnectRabbitMQ(config)
-	channel, queue := consumer.ChannelMQ()
-	msgs := consumer.ConsumerMQNow(channel, queue)
+	consumer := rabbit.NewConsumer(config)
+	msgs := consumer.ConsumerMQNow(config, "Files")
 
 	forever := make(chan bool)
 
@@ -44,5 +42,5 @@ func main() {
 	//fmt.Println(xmlReader)
 	xml := xmlReader.Start(config)
 
-	xml.UnzipFiles(msgs, forever)
+	xml.UnzipFiles(msgs, forever, config)
 }

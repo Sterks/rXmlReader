@@ -5,6 +5,8 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
+	"github.com/Sterks/Pp.Common.Db/db"
+	"github.com/Sterks/rXmlReader/rabbit"
 	"github.com/streadway/amqp"
 	"io"
 	"io/ioutil"
@@ -13,10 +15,9 @@ import (
 	"strings"
 	"time"
 
-	logger2 "github.com/Sterks/FReader/logger"
 	"github.com/Sterks/Pp.Common/common"
+	logger2 "github.com/Sterks/fReader/logger"
 	"github.com/Sterks/rXmlReader/config"
-	"github.com/Sterks/rXmlReader/db"
 	log "github.com/sirupsen/logrus"
 )
 
@@ -29,6 +30,7 @@ type InformationFile struct {
 	Fullpath string
 	Region   string
 	FileZip  []byte
+	TypeFile string
 }
 
 //XMLReader ...
@@ -36,6 +38,7 @@ type XMLReader struct {
 	config *config.Config
 	logger *logger2.Logger
 	db     *db.Database
+	amq	   *rabbit.ProducerMQ
 }
 
 //NewXMLReader ...
@@ -43,17 +46,17 @@ func NewXMLReader(config *config.Config) *XMLReader {
 	return &XMLReader{
 		config: config,
 		db: &db.Database{},
+		amq: &rabbit.ProducerMQ{},
 	}
 }
 
 // OpenDatabase ...
 func (x *XMLReader) Start(config *config.Config) *XMLReader {
-	con := x.db.OpenDatabase(config)
-	x.db.Db = con
+	x.db.OpenDatabase()
 	return x
 }
 
-func (x *XMLReader) UnzipFiles(msgs <-chan amqp.Delivery, forever chan bool) {
+func (x *XMLReader) UnzipFiles(msgs <-chan amqp.Delivery, forever chan bool, config *config.Config) {
 	go func() {
 		for d := range msgs {
 			// f := bytes.NewReader(d.Body)
@@ -69,7 +72,14 @@ func (x *XMLReader) UnzipFiles(msgs <-chan amqp.Delivery, forever chan bool) {
 
 			zipReader, err := zip.NewReader(bytes.NewReader(body), int64(len(body)))
 			if err != nil {
-				log.Printf("Не могу прочитать содержимое файла", err)
+				f, err2 := os.Create("logFile")
+				g := fmt.Sprintf("Не могу прочитать файл - %v - %v", err, inf.NameFile)
+				l := strings.NewReader(g)
+				_, _ = io.Copy(f, l)
+				log.Printf("Не могу прочитать содержимое файла - %v", err)
+				if err2 != nil {
+					log.Printf("Не могу записать в лог - %v", err)
+				}
 				continue
 			}
 
@@ -88,22 +98,18 @@ func (x *XMLReader) UnzipFiles(msgs <-chan amqp.Delivery, forever chan bool) {
 					fmt.Println(hash)
 					_ = zf.Close()
 
-
 					zf2, err3 := zipFile.Open()
 
 					id := x.db.LastID()
 
-					os := zipFile.FileInfo()
-					x.XMLSaver(id, zf2, os)
-					x.db.CreateInfoFile(os, inf.Region, hash, inf.Fullpath, inf.FileID)
-
-					//
-					//unzippedFileBytes, err := readZipFile(zipFile)
-					//if err != nil {
-					//	log.Print("Перевод в байты", err)
-					//	continue
-					//}
-					//_ = unzippedFileBytes // this is unzipped file bytes
+					ost := zipFile.FileInfo()
+					x.XMLSaver(id, zf2, ost)
+					if inf.TypeFile == "notifications" {
+						x.amq.PublishSend(config, ost, "Notifications44", zipFile.Extra, id, ost.Name(), inf.Fullpath)
+					} else if inf.TypeFile == "protocols" {
+						x.amq.PublishSend(config, ost, "Protocols44", zipFile.Extra, id, ost.Name(), inf.Fullpath)
+					}
+					x.db.CreateInfoFile(ost, inf.Region, hash, inf.Fullpath, inf.TypeFile)
 				}
 			}
 		}
@@ -120,7 +126,6 @@ func readZipFile(zf *zip.File) ([]byte, error) {
 	}
 	defer f.Close()
 	return ioutil.ReadAll(f)
-
 }
 
 func (x *XMLReader) XMLSaver(id int, zf2 io.ReadCloser, info os.FileInfo) {
@@ -154,9 +159,6 @@ func (x *XMLReader)  CreateFolder(config *config.Config, ident int) string {
 	if err := os.MkdirAll(saveDir+"/"+lv1+"/"+lv2+"/"+lv3, 0755); err != nil {
 		log.Fatal(err)
 	}
-	// if err := os.MkdirAll(lv4, 0755); err != nil {
-	// 	log.Fatal(err)
-	// }
 	path := fmt.Sprintf("%s/%s/%s/", lv1, lv2, lv3)
 	return path
 }

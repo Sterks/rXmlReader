@@ -1,4 +1,4 @@
-package amqp
+package rabbit
 
 import (
 	"log"
@@ -23,27 +23,20 @@ func NewConsumer(config *config.Config) *ConsumerMQ {
 	}
 }
 
-// ConnectRabbitMQ ...
-func (c *ConsumerMQ) ConnectRabbitMQ(config *config.Config) *amqp.Connection {
+func (c *ConsumerMQ) ConsumerMQNow(config *config.Config, nameQueue string) <-chan amqp.Delivery {
 	conn, err := amqp.Dial(config.Rabbit.ConnectRabbit)
 	if err != nil {
 		log.Fatalf("connection.open: %s", err)
 	}
-	c.conn = conn
-	// defer conn.Close()
-	return conn
-}
 
-// ChannelMQ ...
-func (c *ConsumerMQ) ChannelMQ() (*amqp.Channel, amqp.Queue) {
-	ch, err := c.conn.Channel()
+	ch, err := conn.Channel()
 	if err != nil {
 		log.Fatalf("connection.channel - %s", err)
 	}
-	// defer ch.Close()
+	//defer ch.Close()
 
 	q, err2 := ch.QueueDeclare(
-		"Files",
+		nameQueue,
 		false,
 		false,
 		false,
@@ -53,11 +46,10 @@ func (c *ConsumerMQ) ChannelMQ() (*amqp.Channel, amqp.Queue) {
 	if err2 != nil {
 		log.Fatalf("connection.QueueDeclare - %s", err2)
 	}
-	return ch, q
-}
 
-// ConsumerMQNow ...
-func (c *ConsumerMQ) ConsumerMQNow(ch *amqp.Channel, q amqp.Queue) <-chan amqp.Delivery {
+	err = ch.Qos(1, 0, false)
+	failOnError(err, "Qos - не работает")
+
 	msqs, err := ch.Consume(
 		q.Name,
 		"",

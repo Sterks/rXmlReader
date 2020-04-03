@@ -2,19 +2,88 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aeb005be-f779-4e33-b2f1-5a4478695d1e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbit/producer.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/rXmlReader.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/rXmlReader.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/gorm.go" beforeDir="false" afterPath="$PROJECT_DIR$/db/gorm.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amqp/consumer.go" beforeDir="false" afterPath="$PROJECT_DIR$/rabbit/consumer.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.prod.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.prod.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/gorm.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/XmlReader.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/XmlReader.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="freader@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="freader@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="freader@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="freader: database" type="162271b6:PgImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="freader@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="freader: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="freader@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="freader: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="freader@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="freader: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="freader@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="freader: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="Files: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="rXmlReader" />
@@ -40,16 +109,21 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="ToolWindowRun.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="configurable.Global.GOPATH.is.expanded" value="true" />
     <property name="configurable.Module.GOPATH.is.expanded" value="false" />
     <property name="configurable.Project.GOPATH.is.expanded" value="true" />
+    <property name="database.data.extractors.current.id" value="SQL Inserts" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../fReader" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Pp.Common.Db" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
   </component>
   <component name="RecentsManager">
@@ -57,7 +131,15 @@
       <recent name="$PROJECT_DIR$/db" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Go Build.go build github.com/Sterks/rXmlReader">
+    <configuration name="go build github.com/Sterks/fReader" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="rXmlReader" />
+      <working_directory value="$PROJECT_DIR$/../fReader" />
+      <kind value="PACKAGE" />
+      <package value="github.com/Sterks/fReader" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
     <configuration name="go build github.com/Sterks/rXmlReader" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="rXmlReader" />
       <working_directory value="$PROJECT_DIR$" />
@@ -70,6 +152,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Go Build.go build github.com/Sterks/rXmlReader" />
+        <item itemvalue="Go Build.go build github.com/Sterks/fReader" />
       </list>
     </recent_temporary>
   </component>
@@ -102,6 +185,10 @@
     <proxy>direct</proxy>
   </component>
   <component name="WindowStateProjectService">
+    <state x="2472" y="179" key="#Build_Tags_&amp;_Vendoring" timestamp="1583751297646">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2472" y="179" key="#Build_Tags_&amp;_Vendoring/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583751297646" />
     <state x="2471" y="182" key="#GOROOT" timestamp="1582633681855">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -115,11 +202,24 @@
     </state>
     <state x="320" y="115" key="#Notifications/0.0.1440.900@0.0.1440.900" timestamp="1582142043095" />
     <state x="2347" y="133" key="#Notifications/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1582803202067" />
-    <state x="763" y="256" key="#com.intellij.ide.util.MemberChooser" timestamp="1582192435999">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="2472" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583408205800">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2472" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583408205800" />
+    <state x="2648" y="311" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1583414870868">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2648" y="311" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583414870868" />
+    <state x="763" y="247" key="#com.intellij.ide.util.MemberChooser" timestamp="1583400962890">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="763" y="256" key="#com.intellij.ide.util.MemberChooser/-635.1080.1440.900/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1582192435999" />
     <state x="2683" y="274" key="#com.intellij.ide.util.MemberChooser/-635.1103.1440.877/34.23.1886.1057/1920.23.1920.1057@1920.23.1920.1057" timestamp="1582128403974" />
+    <state x="763" y="247" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583400962890" />
+    <state x="2594" y="148" key="#go_build_github.com/Sterks/fReader" timestamp="1583405750790">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2594" y="148" key="#go_build_github.com/Sterks/fReader/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583405750790" />
     <state x="2593" y="159" key="#go_build_github.com/Sterks/rXmlReader" timestamp="1582633751258">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
@@ -128,17 +228,18 @@
       <screen x="34" y="0" width="1886" height="1080" />
     </state>
     <state x="723" y="164" key="#xdebugger.evaluate/-635.1103.1440.877/34.0.1886.1080/1920.23.1920.1057@34.0.1886.1080" timestamp="1582184532123" />
-    <state width="1022" height="776" key="DebuggerActiveHint" timestamp="1582183359023">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="1022" height="748" key="DebuggerActiveHint" timestamp="1583856440922">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1022" height="776" key="DebuggerActiveHint/-635.1080.1440.900/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1582183359023" />
     <state width="1004" height="776" key="DebuggerActiveHint/-635.1103.1440.877/34.0.1886.1080/1920.23.1920.1057@34.0.1886.1080" timestamp="1582183101395" />
     <state width="766" height="646" key="DebuggerActiveHint/0.0.1440.900@0.0.1440.900" timestamp="1582142174740" />
-    <state x="2660" y="276" key="FileChooserDialogImpl" timestamp="1582806369675">
+    <state width="1022" height="748" key="DebuggerActiveHint/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583856440922" />
+    <state x="2289" y="123" key="FileChooserDialogImpl" timestamp="1583851725029">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2660" y="276" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1582806369675" />
-    <state width="1877" height="258" key="GridCell.Tab.0.bottom" timestamp="1582635490523">
+    <state x="2289" y="123" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583851725029" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1583858884697">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1878" height="212" key="GridCell.Tab.0.bottom/-635.1080.1440.900/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1582183528893" />
@@ -149,9 +250,10 @@
     <state width="1878" height="212" key="GridCell.Tab.0.bottom/-635.1103.1440.877/34.0.1886.1080/1920.23.1920.1057@34.0.1886.1080" timestamp="1582184556031" />
     <state width="1844" height="290" key="GridCell.Tab.0.bottom/-635.1103.1440.877/34.23.1886.1057/1920.23.1920.1057@1920.23.1920.1057" timestamp="1582129636132" />
     <state width="1398" height="226" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1582146738272" />
-    <state width="1877" height="258" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1582635490523" />
+    <state width="1877" height="258" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583403205873" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583858884697" />
     <state width="1844" height="290" key="GridCell.Tab.0.bottom/28.23.1412.877@28.23.1412.877" timestamp="1582141158859" />
-    <state width="1877" height="258" key="GridCell.Tab.0.center" timestamp="1582635490523">
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1583858884696">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1878" height="212" key="GridCell.Tab.0.center/-635.1080.1440.900/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1582183528891" />
@@ -162,9 +264,10 @@
     <state width="1878" height="212" key="GridCell.Tab.0.center/-635.1103.1440.877/34.0.1886.1080/1920.23.1920.1057@34.0.1886.1080" timestamp="1582184556028" />
     <state width="1844" height="290" key="GridCell.Tab.0.center/-635.1103.1440.877/34.23.1886.1057/1920.23.1920.1057@1920.23.1920.1057" timestamp="1582129636131" />
     <state width="1398" height="226" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1582146738253" />
-    <state width="1877" height="258" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1582635490523" />
+    <state width="1877" height="258" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583403205873" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583858884696" />
     <state width="1844" height="290" key="GridCell.Tab.0.center/28.23.1412.877@28.23.1412.877" timestamp="1582141158859" />
-    <state width="1877" height="258" key="GridCell.Tab.0.left" timestamp="1582635490523">
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1583858884696">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1878" height="212" key="GridCell.Tab.0.left/-635.1080.1440.900/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1582183528889" />
@@ -175,9 +278,10 @@
     <state width="1878" height="212" key="GridCell.Tab.0.left/-635.1103.1440.877/34.0.1886.1080/1920.23.1920.1057@34.0.1886.1080" timestamp="1582184556027" />
     <state width="1844" height="290" key="GridCell.Tab.0.left/-635.1103.1440.877/34.23.1886.1057/1920.23.1920.1057@1920.23.1920.1057" timestamp="1582129636130" />
     <state width="1398" height="226" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1582146738246" />
-    <state width="1877" height="258" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1582635490523" />
+    <state width="1877" height="258" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583403205872" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583858884696" />
     <state width="1844" height="290" key="GridCell.Tab.0.left/28.23.1412.877@28.23.1412.877" timestamp="1582141158858" />
-    <state width="1877" height="258" key="GridCell.Tab.0.right" timestamp="1582635490523">
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1583858884696">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1878" height="212" key="GridCell.Tab.0.right/-635.1080.1440.900/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1582183528892" />
@@ -188,40 +292,45 @@
     <state width="1878" height="212" key="GridCell.Tab.0.right/-635.1103.1440.877/34.0.1886.1080/1920.23.1920.1057@34.0.1886.1080" timestamp="1582184556030" />
     <state width="1844" height="290" key="GridCell.Tab.0.right/-635.1103.1440.877/34.23.1886.1057/1920.23.1920.1057@1920.23.1920.1057" timestamp="1582129636132" />
     <state width="1398" height="226" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1582146738264" />
-    <state width="1877" height="258" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1582635490523" />
+    <state width="1877" height="258" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583403205873" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583858884696" />
     <state width="1844" height="290" key="GridCell.Tab.0.right/28.23.1412.877@28.23.1412.877" timestamp="1582141158859" />
-    <state width="1878" height="212" key="GridCell.Tab.1.bottom" timestamp="1582192518316">
-      <screen x="33" y="23" width="1887" height="1057" />
+    <state width="1877" height="326" key="GridCell.Tab.1.bottom" timestamp="1583857327306">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1878" height="212" key="GridCell.Tab.1.bottom/-635.1080.1440.900/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1582183529411" />
     <state width="1878" height="212" key="GridCell.Tab.1.bottom/-635.1103.1440.877/1920.23.1920.1057/33.23.1887.1057@33.23.1887.1057" timestamp="1582192518316" />
     <state width="1398" height="284" key="GridCell.Tab.1.bottom/-635.1103.1440.877/28.23.1892.1057/1920.23.1920.1057@28.23.1892.1057" timestamp="1582179092135" />
     <state width="1878" height="212" key="GridCell.Tab.1.bottom/-635.1103.1440.877/34.0.1886.1080/1920.23.1920.1057@34.0.1886.1080" timestamp="1582184556525" />
     <state width="1398" height="284" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1582142436674" />
-    <state width="1878" height="212" key="GridCell.Tab.1.center" timestamp="1582192518314">
-      <screen x="33" y="23" width="1887" height="1057" />
+    <state width="1877" height="326" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583857327306" />
+    <state width="1877" height="326" key="GridCell.Tab.1.center" timestamp="1583857327306">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1878" height="212" key="GridCell.Tab.1.center/-635.1080.1440.900/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1582183529409" />
     <state width="1878" height="212" key="GridCell.Tab.1.center/-635.1103.1440.877/1920.23.1920.1057/33.23.1887.1057@33.23.1887.1057" timestamp="1582192518314" />
     <state width="1398" height="284" key="GridCell.Tab.1.center/-635.1103.1440.877/28.23.1892.1057/1920.23.1920.1057@28.23.1892.1057" timestamp="1582179092133" />
     <state width="1878" height="212" key="GridCell.Tab.1.center/-635.1103.1440.877/34.0.1886.1080/1920.23.1920.1057@34.0.1886.1080" timestamp="1582184556524" />
     <state width="1398" height="284" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1582142436673" />
-    <state width="1878" height="212" key="GridCell.Tab.1.left" timestamp="1582192518312">
-      <screen x="33" y="23" width="1887" height="1057" />
+    <state width="1877" height="326" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583857327306" />
+    <state width="1877" height="326" key="GridCell.Tab.1.left" timestamp="1583857327306">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1878" height="212" key="GridCell.Tab.1.left/-635.1080.1440.900/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1582183529408" />
     <state width="1878" height="212" key="GridCell.Tab.1.left/-635.1103.1440.877/1920.23.1920.1057/33.23.1887.1057@33.23.1887.1057" timestamp="1582192518312" />
     <state width="1398" height="284" key="GridCell.Tab.1.left/-635.1103.1440.877/28.23.1892.1057/1920.23.1920.1057@28.23.1892.1057" timestamp="1582179092132" />
     <state width="1878" height="212" key="GridCell.Tab.1.left/-635.1103.1440.877/34.0.1886.1080/1920.23.1920.1057@34.0.1886.1080" timestamp="1582184556523" />
     <state width="1398" height="284" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1582142436672" />
-    <state width="1878" height="212" key="GridCell.Tab.1.right" timestamp="1582192518315">
-      <screen x="33" y="23" width="1887" height="1057" />
+    <state width="1877" height="326" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583857327306" />
+    <state width="1877" height="326" key="GridCell.Tab.1.right" timestamp="1583857327306">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1878" height="212" key="GridCell.Tab.1.right/-635.1080.1440.900/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1582183529410" />
     <state width="1878" height="212" key="GridCell.Tab.1.right/-635.1103.1440.877/1920.23.1920.1057/33.23.1887.1057@33.23.1887.1057" timestamp="1582192518315" />
     <state width="1398" height="284" key="GridCell.Tab.1.right/-635.1103.1440.877/28.23.1892.1057/1920.23.1920.1057@28.23.1892.1057" timestamp="1582179092134" />
     <state width="1878" height="212" key="GridCell.Tab.1.right/-635.1103.1440.877/34.0.1886.1080/1920.23.1920.1057@34.0.1886.1080" timestamp="1582184556524" />
     <state width="1398" height="284" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1582142436674" />
+    <state width="1877" height="326" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583857327306" />
     <state x="238" y="100" key="SettingsEditor" timestamp="1582141156812">
       <screen x="28" y="23" width="1412" height="877" />
     </state>
@@ -250,6 +359,48 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$USER_HOME$/go/pkg/mod/github.com/!sterks/!pp.!common.!db@v0.2.4/db/gorm.go</url>
+          <line>55</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$USER_HOME$/go/pkg/mod/github.com/!sterks/!pp.!common.!db@v0.2.4/db/gorm.go</url>
+          <line>54</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$USER_HOME$/go/pkg/mod/github.com/!sterks/!pp.!common.!db@v0.2.4/db/gorm.go</url>
+          <line>83</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$USER_HOME$/go/pkg/mod/github.com/!sterks/!pp.!common.!db@v0.2.4/db/gorm.go</url>
+          <line>84</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$USER_HOME$/go/pkg/mod/github.com/!sterks/!pp.!common.!db@v0.2.4/db/gorm.go</url>
+          <line>75</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$USER_HOME$/go/pkg/mod/github.com/!sterks/!pp.!common.!db@v0.2.4/db/gorm.go</url>
+          <line>69</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$USER_HOME$/go/pkg/mod/github.com/!sterks/!pp.!common.!db@v0.2.4/db/gorm.go</url>
+          <line>68</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$USER_HOME$/go/pkg/mod/github.com/!sterks/!pp.!common.!db@v0.2.4/db/gorm.go</url>
+          <line>67</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="DlvErrorBreakpoint" />
       </default-breakpoints>
