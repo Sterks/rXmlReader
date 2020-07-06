@@ -1,19 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="aeb005be-f779-4e33-b2f1-5a4478695d1e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rabbit/producer.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/rXmlReader.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/rXmlReader.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/amqp/consumer.go" beforeDir="false" afterPath="$PROJECT_DIR$/rabbit/consumer.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/config.prod.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.prod.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/gorm.go" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbit/consumer.go" beforeDir="false" afterPath="$PROJECT_DIR$/rabbit/consumer.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbit/producer.go" beforeDir="false" afterPath="$PROJECT_DIR$/rabbit/producer.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/XmlReader.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/XmlReader.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,12 +117,12 @@
   <component name="ProjectId" id="1Y25t02tiSe8WPtb9E9NzYfPwrK" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="ToolWindowRun.ShowToolbar" value="false" />
@@ -122,9 +134,9 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Pp.Common.Db" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../fReader" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
     <key name="GoMoveDeclarationDialog.RECENT_KEY">
@@ -156,32 +168,42 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Docker" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-            </expand>
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
   <component name="StructureViewFactory">
     <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
     <option name="ACTIVE_ACTIONS" value=",Show package structure,ALPHA_COMPARATOR,EXPORTABILITY_SORTER" />
   </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aeb005be-f779-4e33-b2f1-5a4478695d1e" name="Default Changelist" comment="" />
+      <created>1587056417888</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587056417888</updated>
+    </task>
+    <servers />
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
+    <environment>
+      <map>
+        <entry key="GOPROXY" value="direct" />
+      </map>
+    </environment>
     <proxy>direct</proxy>
   </component>
   <component name="WindowStateProjectService">
@@ -224,23 +246,30 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2593" y="159" key="#go_build_github.com/Sterks/rXmlReader/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1582633751258" />
-    <state x="723" y="164" key="#xdebugger.evaluate" timestamp="1582184532123">
-      <screen x="34" y="0" width="1886" height="1080" />
+    <state x="3201" y="138" key="#xdebugger.XInspectDialog" timestamp="1587240626190">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="3201" y="138" key="#xdebugger.XInspectDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1587240626190" />
+    <state x="2621" y="158" key="#xdebugger.evaluate" timestamp="1587240637478">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="723" y="164" key="#xdebugger.evaluate/-635.1103.1440.877/34.0.1886.1080/1920.23.1920.1057@34.0.1886.1080" timestamp="1582184532123" />
-    <state width="1022" height="748" key="DebuggerActiveHint" timestamp="1583856440922">
+    <state x="2621" y="158" key="#xdebugger.evaluate/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1587240637478" />
+    <state width="1022" height="748" key="DebuggerActiveHint" timestamp="1587240704535">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1022" height="776" key="DebuggerActiveHint/-635.1080.1440.900/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1582183359023" />
     <state width="1004" height="776" key="DebuggerActiveHint/-635.1103.1440.877/34.0.1886.1080/1920.23.1920.1057@34.0.1886.1080" timestamp="1582183101395" />
     <state width="766" height="646" key="DebuggerActiveHint/0.0.1440.900@0.0.1440.900" timestamp="1582142174740" />
-    <state width="1022" height="748" key="DebuggerActiveHint/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583856440922" />
-    <state x="2289" y="123" key="FileChooserDialogImpl" timestamp="1583851725029">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1022" height="748" key="DebuggerActiveHint/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587136676410" />
+    <state width="1022" height="748" key="DebuggerActiveHint/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1587240704535" />
+    <state x="369" y="123" key="FileChooserDialogImpl" timestamp="1587502111181">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="369" y="123" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587502111181" />
     <state x="2289" y="123" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583851725029" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1583858884697">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="914" height="275" key="GridCell.Tab.0.bottom" timestamp="1587501796645">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1878" height="212" key="GridCell.Tab.0.bottom/-635.1080.1440.900/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1582183528893" />
     <state width="1878" height="238" key="GridCell.Tab.0.bottom/-635.1080.1440.900/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1582214382436" />
@@ -250,11 +279,11 @@
     <state width="1878" height="212" key="GridCell.Tab.0.bottom/-635.1103.1440.877/34.0.1886.1080/1920.23.1920.1057@34.0.1886.1080" timestamp="1582184556031" />
     <state width="1844" height="290" key="GridCell.Tab.0.bottom/-635.1103.1440.877/34.23.1886.1057/1920.23.1920.1057@1920.23.1920.1057" timestamp="1582129636132" />
     <state width="1398" height="226" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1582146738272" />
-    <state width="1877" height="258" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583403205873" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583858884697" />
+    <state width="914" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587501796645" />
+    <state width="1860" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1587242641392" />
     <state width="1844" height="290" key="GridCell.Tab.0.bottom/28.23.1412.877@28.23.1412.877" timestamp="1582141158859" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1583858884696">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="914" height="275" key="GridCell.Tab.0.center" timestamp="1587501796645">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1878" height="212" key="GridCell.Tab.0.center/-635.1080.1440.900/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1582183528891" />
     <state width="1878" height="238" key="GridCell.Tab.0.center/-635.1080.1440.900/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1582214382432" />
@@ -264,11 +293,11 @@
     <state width="1878" height="212" key="GridCell.Tab.0.center/-635.1103.1440.877/34.0.1886.1080/1920.23.1920.1057@34.0.1886.1080" timestamp="1582184556028" />
     <state width="1844" height="290" key="GridCell.Tab.0.center/-635.1103.1440.877/34.23.1886.1057/1920.23.1920.1057@1920.23.1920.1057" timestamp="1582129636131" />
     <state width="1398" height="226" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1582146738253" />
-    <state width="1877" height="258" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583403205873" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583858884696" />
+    <state width="914" height="275" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587501796645" />
+    <state width="1860" height="275" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1587242641392" />
     <state width="1844" height="290" key="GridCell.Tab.0.center/28.23.1412.877@28.23.1412.877" timestamp="1582141158859" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1583858884696">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="914" height="275" key="GridCell.Tab.0.left" timestamp="1587501796645">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1878" height="212" key="GridCell.Tab.0.left/-635.1080.1440.900/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1582183528889" />
     <state width="1878" height="238" key="GridCell.Tab.0.left/-635.1080.1440.900/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1582214382431" />
@@ -278,11 +307,11 @@
     <state width="1878" height="212" key="GridCell.Tab.0.left/-635.1103.1440.877/34.0.1886.1080/1920.23.1920.1057@34.0.1886.1080" timestamp="1582184556027" />
     <state width="1844" height="290" key="GridCell.Tab.0.left/-635.1103.1440.877/34.23.1886.1057/1920.23.1920.1057@1920.23.1920.1057" timestamp="1582129636130" />
     <state width="1398" height="226" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1582146738246" />
-    <state width="1877" height="258" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583403205872" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583858884696" />
+    <state width="914" height="275" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587501796645" />
+    <state width="1860" height="275" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1587242641392" />
     <state width="1844" height="290" key="GridCell.Tab.0.left/28.23.1412.877@28.23.1412.877" timestamp="1582141158858" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1583858884696">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="914" height="275" key="GridCell.Tab.0.right" timestamp="1587501796645">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1878" height="212" key="GridCell.Tab.0.right/-635.1080.1440.900/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1582183528892" />
     <state width="1878" height="238" key="GridCell.Tab.0.right/-635.1080.1440.900/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1582214382434" />
@@ -292,10 +321,10 @@
     <state width="1878" height="212" key="GridCell.Tab.0.right/-635.1103.1440.877/34.0.1886.1080/1920.23.1920.1057@34.0.1886.1080" timestamp="1582184556030" />
     <state width="1844" height="290" key="GridCell.Tab.0.right/-635.1103.1440.877/34.23.1886.1057/1920.23.1920.1057@1920.23.1920.1057" timestamp="1582129636132" />
     <state width="1398" height="226" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1582146738264" />
-    <state width="1877" height="258" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1583403205873" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583858884696" />
+    <state width="914" height="275" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587501796645" />
+    <state width="1860" height="275" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1587242641392" />
     <state width="1844" height="290" key="GridCell.Tab.0.right/28.23.1412.877@28.23.1412.877" timestamp="1582141158859" />
-    <state width="1877" height="326" key="GridCell.Tab.1.bottom" timestamp="1583857327306">
+    <state width="1877" height="340" key="GridCell.Tab.1.bottom" timestamp="1587241129861">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1878" height="212" key="GridCell.Tab.1.bottom/-635.1080.1440.900/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1582183529411" />
@@ -303,8 +332,9 @@
     <state width="1398" height="284" key="GridCell.Tab.1.bottom/-635.1103.1440.877/28.23.1892.1057/1920.23.1920.1057@28.23.1892.1057" timestamp="1582179092135" />
     <state width="1878" height="212" key="GridCell.Tab.1.bottom/-635.1103.1440.877/34.0.1886.1080/1920.23.1920.1057@34.0.1886.1080" timestamp="1582184556525" />
     <state width="1398" height="284" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1582142436674" />
-    <state width="1877" height="326" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583857327306" />
-    <state width="1877" height="326" key="GridCell.Tab.1.center" timestamp="1583857327306">
+    <state width="1877" height="340" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587138324627" />
+    <state width="1877" height="340" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1587241129861" />
+    <state width="1877" height="340" key="GridCell.Tab.1.center" timestamp="1587241129861">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1878" height="212" key="GridCell.Tab.1.center/-635.1080.1440.900/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1582183529409" />
@@ -312,8 +342,9 @@
     <state width="1398" height="284" key="GridCell.Tab.1.center/-635.1103.1440.877/28.23.1892.1057/1920.23.1920.1057@28.23.1892.1057" timestamp="1582179092133" />
     <state width="1878" height="212" key="GridCell.Tab.1.center/-635.1103.1440.877/34.0.1886.1080/1920.23.1920.1057@34.0.1886.1080" timestamp="1582184556524" />
     <state width="1398" height="284" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1582142436673" />
-    <state width="1877" height="326" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583857327306" />
-    <state width="1877" height="326" key="GridCell.Tab.1.left" timestamp="1583857327306">
+    <state width="1877" height="340" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587138324627" />
+    <state width="1877" height="340" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1587241129861" />
+    <state width="1877" height="340" key="GridCell.Tab.1.left" timestamp="1587241129861">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1878" height="212" key="GridCell.Tab.1.left/-635.1080.1440.900/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1582183529408" />
@@ -321,8 +352,9 @@
     <state width="1398" height="284" key="GridCell.Tab.1.left/-635.1103.1440.877/28.23.1892.1057/1920.23.1920.1057@28.23.1892.1057" timestamp="1582179092132" />
     <state width="1878" height="212" key="GridCell.Tab.1.left/-635.1103.1440.877/34.0.1886.1080/1920.23.1920.1057@34.0.1886.1080" timestamp="1582184556523" />
     <state width="1398" height="284" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1582142436672" />
-    <state width="1877" height="326" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583857327306" />
-    <state width="1877" height="326" key="GridCell.Tab.1.right" timestamp="1583857327306">
+    <state width="1877" height="340" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587138324626" />
+    <state width="1877" height="340" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1587241129861" />
+    <state width="1877" height="340" key="GridCell.Tab.1.right" timestamp="1587241129861">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state width="1878" height="212" key="GridCell.Tab.1.right/-635.1080.1440.900/0.0.1920.1080/1920.0.1920.1080@0.0.1920.1080" timestamp="1582183529410" />
@@ -330,10 +362,12 @@
     <state width="1398" height="284" key="GridCell.Tab.1.right/-635.1103.1440.877/28.23.1892.1057/1920.23.1920.1057@28.23.1892.1057" timestamp="1582179092134" />
     <state width="1878" height="212" key="GridCell.Tab.1.right/-635.1103.1440.877/34.0.1886.1080/1920.23.1920.1057@34.0.1886.1080" timestamp="1582184556524" />
     <state width="1398" height="284" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1582142436674" />
-    <state width="1877" height="326" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583857327306" />
-    <state x="238" y="100" key="SettingsEditor" timestamp="1582141156812">
-      <screen x="28" y="23" width="1412" height="877" />
+    <state width="1877" height="340" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587138324627" />
+    <state width="1877" height="340" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1587241129861" />
+    <state x="286" y="91" key="SettingsEditor" timestamp="1587461366850">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="286" y="91" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1587461366850" />
     <state x="238" y="100" key="SettingsEditor/28.23.1412.877@28.23.1412.877" timestamp="1582141156812" />
     <state width="510" height="445" key="SwitcherDM" timestamp="1582142859384">
       <screen x="0" y="0" width="1440" height="900" />
@@ -400,10 +434,91 @@
           <line>67</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/rabbit/producer.go</url>
+          <line>58</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/rabbit/producer.go</url>
+          <line>65</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/rabbit/producer.go</url>
+          <line>64</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/services/XmlReader.go</url>
+          <line>87</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/services/XmlReader.go</url>
+          <line>61</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/services/XmlReader.go</url>
+          <line>62</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/services/XmlReader.go</url>
+          <line>67</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/services/XmlReader.go</url>
+          <line>83</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/services/XmlReader.go</url>
+          <line>97</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/services/XmlReader.go</url>
+          <line>103</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/services/XmlReader.go</url>
+          <line>104</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/services/XmlReader.go</url>
+          <line>112</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/services/XmlReader.go</url>
+          <line>113</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/services/XmlReader.go</url>
+          <line>92</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/services/XmlReader.go</url>
+          <line>102</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="DlvErrorBreakpoint" />
       </default-breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="GoApplicationRunConfiguration">
+        <watch expression="func() {&#10;&#9;&#9;for d := range msgs {&#10;&#9;&#9;&#9;var inf InformationFile&#10;&#9;&#9;&#9;err := json.Unmarshal(d.Body, &amp;inf)&#10;&#9;&#9;&#9;if err != nil {&#10;&#9;&#9;&#9;&#9;fmt.Println(&quot;Can't deserislize&quot;)&#10;&#9;&#9;&#9;}&#10;&#10;&#9;&#9;&#9;body := inf.FileZip&#10;&#10;&#9;&#9;&#9;zipReader, err := zip.NewReader(bytes.NewReader(body), int64(len(body)))&#10;&#9;&#9;&#9;if err != nil {&#10;&#9;&#9;&#9;&#9;f, err2 := os.Create(&quot;logFile&quot;)&#10;&#9;&#9;&#9;&#9;g := fmt.Sprintf(&quot;Не могу прочитать файл - %v - %v&quot;, err, inf.NameFile)&#10;&#9;&#9;&#9;&#9;l := strings.NewReader(g)&#10;&#9;&#9;&#9;&#9;_, _ = io.Copy(f, l)&#10;&#9;&#9;&#9;&#9;log.Printf(&quot;Не могу прочитать содержимое файла - %v&quot;, err)&#10;&#9;&#9;&#9;&#9;if err2 != nil {&#10;&#9;&#9;&#9;&#9;&#9;log.Printf(&quot;Не могу записать в лог - %v&quot;, err)&#10;&#9;&#9;&#9;&#9;}&#10;&#9;&#9;&#9;&#9;continue&#10;&#9;&#9;&#9;}&#10;&#10;&#9;&#9;&#9;// Read all the files from zip archive&#10;&#9;&#9;&#9;for _, zipFile := range zipReader.File {&#10;&#9;&#9;&#9;&#9;res := strings.Contains(zipFile.Name, &quot;.xml&quot;)&#10;&#9;&#9;&#9;&#9;if res == true {&#10;&#9;&#9;&#9;&#9;&#9;fmt.Println(&quot;Reading file:&quot;, zipFile.Name+&quot; - &quot;+inf.NameFile, inf.SizeFile)&#10;&#10;&#9;&#9;&#9;&#9;&#9;zf, err3 := zipFile.Open()&#10;&#9;&#9;&#9;&#9;&#9;if err3 != nil {&#10;&#9;&#9;&#9;&#9;&#9;&#9;log.Printf(&quot;Не могу прочитать файл: %v&quot;, err3)&#10;&#9;&#9;&#9;&#9;&#9;&#9;continue&#10;&#9;&#9;&#9;&#9;&#9;}&#10;&#9;&#9;&#9;&#9;&#9;hash := common.GetHash(zf)&#10;&#9;&#9;&#9;&#9;&#9;fmt.Println(hash)&#10;&#9;&#9;&#9;&#9;&#9;_ = zf.Close()&#10;&#10;&#9;&#9;&#9;&#9;&#9;zf2, err3 := zipFile.Open()&#10;&#10;&#9;&#9;&#9;&#9;&#9;id := x.db.LastID()&#10;&#10;&#9;&#9;&#9;&#9;&#9;ost := zipFile.FileInfo()&#10;&#9;&#9;&#9;&#9;&#9;x.XMLSaver(id, zf2, ost)&#10;&#9;&#9;&#9;&#9;&#9;if inf.TypeFile == &quot;notifications&quot; {&#10;&#9;&#9;&#9;&#9;&#9;&#9;x.amq.PublishSend(config, ost, &quot;Notifications44&quot;, zipFile.Extra, id, ost.Name(), inf.Fullpath)&#10;&#9;&#9;&#9;&#9;&#9;} else if inf.TypeFile == &quot;protocols&quot; {&#10;&#9;&#9;&#9;&#9;&#9;&#9;x.amq.PublishSend(config, ost, &quot;Protocols44&quot;, zipFile.Extra, id, ost.Name(), inf.Fullpath)&#10;&#9;&#9;&#9;&#9;&#9;}&#10;&#9;&#9;&#9;&#9;&#9;x.db.CreateInfoFile(ost, inf.Region, hash, inf.Fullpath, inf.TypeFile)&#10;&#9;&#9;&#9;&#9;}&#10;&#9;&#9;&#9;}&#10;&#9;&#9;}&#10;&#9;}" />
+        <watch expression="*(*&quot;archive/zip.headerFileInfo&quot;)(824634440344)" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

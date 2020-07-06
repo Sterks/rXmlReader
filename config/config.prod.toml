@@ -4,7 +4,7 @@ log_level = "debug"
 
 [Directory]
 root_path = "/fcs_regions"
-main_folder = "D:/Files"
+main_folder = "F:/Files"
 
 [Tasks]
 notifications = 5

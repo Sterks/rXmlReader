@@ -2,17 +2,18 @@ package rabbit
 
 import (
 	"encoding/json"
-	config2 "github.com/Sterks/rXmlReader/config"
-	"github.com/streadway/amqp"
 	"log"
 	"os"
 	"time"
+
+	config2 "github.com/Sterks/rXmlReader/config"
+	"github.com/streadway/amqp"
 )
 
 type ProducerMQ struct {
 	config *config2.Config
-	am *amqp.Connection
-	amq *amqp.Channel
+	am     *amqp.Connection
+	amq    *amqp.Channel
 }
 
 type InformationFile struct {
@@ -75,6 +76,6 @@ func (pr *ProducerMQ) PublishSend(config *config2.Config, info os.FileInfo, name
 			ContentType: "application/json",
 			Body:        bodyJSON,
 		})
-	log.Printf(" [x] Sent %s - название очереди %s", body.NameFile, nameQueue )
+	log.Printf(" [x] Sent %s - название очереди %s", body.NameFile, nameQueue)
 	failOnError(err, "Failed to publish a message")
 }
