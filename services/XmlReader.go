@@ -8,6 +8,7 @@ import (
 	"io"
 	"io/ioutil"
 	"os"
+	"regexp"
 	"strconv"
 	"strings"
 	"time"
@@ -116,29 +117,29 @@ func (x *XMLReader) UnzipFiles(msgs <-chan amqp.Delivery, forever chan bool, con
 					} else if inf.TypeFile == "protocols44" {
 						x.amq.PublishSend(config, ost, "Protocols44OpenFile", zipFile.Extra, id, ost.Name(), inf.Fullpath)
 					} else {
-					pattern := ".+Notice"
-					reg := value.Name()
-					matched, err := regexp.MatchString(pattern, reg)
-					if err != nil {
-						log.Printf("Не могу распознать слова - %v", err)
+						pattern := ".+Notice"
+						reg := inf.TypeFile
+						matched, err := regexp.MatchString(pattern, reg)
+						if err != nil {
+							log.Printf("Не могу распознать слова - %v", err)
+						}
+						if matched {
+							x.amq.PublishSend(config, ost, "Notifications223OpenFile", zipFile.Extra, id, ost.Name(), inf.Fullpath)
+						} else {
+							pattern := ".+Protocol"
+							reg := inf.TypeFile
+							matched, err := regexp.MatchString(pattern, reg)
+							if err != nil {
+								log.Printf("Не могу распознать слова - %v", err)
+							}
+							if matched {
+								x.amq.PublishSend(config, ost, "Protocols223OpenFile", zipFile.Extra, id, ost.Name(), inf.Fullpath)
+							} else {
+								x.amq.PublishSend(config, ost, "Not choose", zipFile.Extra, id, ost.Name(), inf.Fullpath)
+							}
+							x.db.CreateInfoFile(ost, inf.Region, hash, inf.Fullpath, inf.TypeFile, inf.TypeFile)
+						}
 					}
-					if matched {
-						x.amq.PublishSend(config, ost, "Notifications223OpenFile", zipFile.Extra, id, ost.Name(), inf.Fullpath)
-					} else {
-					pattern := ".+Protocol"
-					reg := value.Name()
-					matched, err := regexp.MatchString(pattern, reg)
-					if err != nil {
-						log.Printf("Не могу распознать слова - %v", err)
-					}
-					if matched {
-							x.amq.PublishSend(config, ost, "Protocols223OpenFile", zipFile.Extra, id, ost.Name(), inf.Fullpath)
-					} else {
-						x.amq.PublishSend(config, ost, "Not choose", zipFile.Extra, id, ost.Name(), inf.Fullpath)
-					}
-					x.db.CreateInfoFile(ost, inf.Region, hash, inf.Fullpath, inf.TypeFile, inf.TypeFile)
-				}
-				}
 				}
 			}
 		}

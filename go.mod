@@ -6,7 +6,7 @@ require (
 	github.com/BurntSushi/toml v0.3.1
 	github.com/Sterks/FReader v0.2.1
 	github.com/Sterks/Pp.Common v0.0.6
-	github.com/Sterks/Pp.Common.Db v0.5.0
+	github.com/Sterks/Pp.Common.Db v0.5.1
 	github.com/Sterks/fReader v0.3.4
 	github.com/jinzhu/gorm v1.9.14
 	github.com/kr/pretty v0.2.0 // indirect
