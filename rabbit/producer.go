@@ -32,17 +32,22 @@ func failOnError(err error, msg string) {
 	}
 }
 
+// PublishSend ...
 func (pr *ProducerMQ) PublishSend(config *config2.Config, info os.FileInfo, nameQueue string, in []byte, id int, region string, fullpath string) {
-	conn, err := amqp.Dial(config.Rabbit.ConnectRabbit)
 
-	failOnError(err, "Failed to connect to RabbitMQ")
+	conn, err := amqp.Dial(config.Rabbit.ConnectRabbit)
+	if err != nil {
+		log.Fatalf("Не могу подключиться к RabbitMQ - %v", err)
+	}
 	defer conn.Close()
 
 	ch, err := conn.Channel()
-	failOnError(err, "Failed to open a channel")
+	if err != nil {
+		log.Fatalf("Не могу открыть канал - %v", err)
+	}
 	defer ch.Close()
 
-	q, err := ch.QueueDeclare(
+	q, err2 := ch.QueueDeclare(
 		nameQueue, // name
 		false,     // durable
 		false,     // delete when unused
@@ -50,7 +55,9 @@ func (pr *ProducerMQ) PublishSend(config *config2.Config, info os.FileInfo, name
 		false,     // no-wait
 		nil,       // arguments
 	)
-	failOnError(err, "Failed to declare a queue")
+	if err2 != nil {
+		log.Fatalf("Не могу открыть очередь - %v", err)
+	}
 
 	body := &InformationFile{
 		FileID:   id,
@@ -67,7 +74,7 @@ func (pr *ProducerMQ) PublishSend(config *config2.Config, info os.FileInfo, name
 		log.Println(err3)
 	}
 
-	err = ch.Publish(
+	if err4 := ch.Publish(
 		"",     // exchange
 		q.Name, // routing key
 		false,  // mandatory
@@ -75,7 +82,8 @@ func (pr *ProducerMQ) PublishSend(config *config2.Config, info os.FileInfo, name
 		amqp.Publishing{
 			ContentType: "application/json",
 			Body:        bodyJSON,
-		})
+		}); err4 != nil {
+		log.Fatalf("Не могу опубликовать - %v", err4)
+	}
 	log.Printf(" [x] Sent %s - название очереди %s", body.NameFile, nameQueue)
-	failOnError(err, "Failed to publish a message")
 }

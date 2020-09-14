@@ -8,12 +8,14 @@ import (
 	"io"
 	"io/ioutil"
 	"os"
+	"path/filepath"
 	"regexp"
 	"strconv"
 	"strings"
 	"time"
 
 	"github.com/Sterks/Pp.Common.Db/db"
+	"github.com/Sterks/Pp.Common.Db/models"
 	"github.com/Sterks/rXmlReader/rabbit"
 	"github.com/streadway/amqp"
 
@@ -58,7 +60,8 @@ func (x *XMLReader) Start(config *config.Config) *XMLReader {
 	return x
 }
 
-func (x *XMLReader) UnzipFiles(msgs <-chan amqp.Delivery, forever chan bool, config *config.Config) {
+// UnzipFiles ...
+func (x *XMLReader) UnzipFiles(msgs <-chan amqp.Delivery, forever chan bool, config *config.Config, typeFile string) {
 	go func() {
 		for d := range msgs {
 			var inf InformationFile
@@ -72,9 +75,9 @@ func (x *XMLReader) UnzipFiles(msgs <-chan amqp.Delivery, forever chan bool, con
 			zipReader, err := zip.NewReader(bytes.NewReader(body), int64(len(body)))
 			if err != nil {
 				f, err2 := os.Create("logFile")
+				defer f.Close()
 				g := fmt.Sprintf("Не могу прочитать файл - %v - %v", err, inf.NameFile)
-				l := strings.NewReader(g)
-				_, _ = io.Copy(f, l)
+				f.WriteString(g)
 				log.Printf("Не могу прочитать содержимое файла - %v", err)
 				if err2 != nil {
 					log.Printf("Не могу записать в лог - %v", err)
@@ -92,30 +95,30 @@ func (x *XMLReader) UnzipFiles(msgs <-chan amqp.Delivery, forever chan bool, con
 						log.Printf("Не могу прочитать файл: %v", err3)
 						continue
 					}
-					defer zf.Close()
-					hash := common.GetHash(zf)
-					fmt.Println(hash)
-					_ = zf.Close()
 
+					hash := common.GetHash(zf)
 					zf2, err3 := zipFile.Open()
-					defer zf2.Close()
+
+					id := x.db.LastID()
+					ost := zipFile.FileInfo()
+					x.XMLSaver(id, zf2, ost)
+
 					zf3, err4 := zipFile.Open()
 					if err4 != nil {
 						log.Println("Не могу прочитать - %v", err4)
 					}
-					defer zf2.Close()
-					id := x.db.LastID()
-					ost := zipFile.FileInfo()
-					x.XMLSaver(id, zf2, ost)
 
 					zzz, err5 := ioutil.ReadAll(zf3)
 					if err5 != nil {
 						log.Println(err5)
 					}
+
 					if inf.TypeFile == "notifications44" {
 						x.amq.PublishSend(config, ost, "Notifications44OpenFile", zzz, id, ost.Name(), inf.Fullpath)
+						typeFile = x.AddToDatabase(ost, typeFile, inf, hash)
 					} else if inf.TypeFile == "protocols44" {
-						x.amq.PublishSend(config, ost, "Protocols44OpenFile", zipFile.Extra, id, ost.Name(), inf.Fullpath)
+						x.amq.PublishSend(config, ost, "Protocols44OpenFile", zzz, id, ost.Name(), inf.Fullpath)
+						typeFile = x.AddToDatabase(ost, typeFile, inf, hash)
 					} else {
 						pattern := ".+Notice"
 						reg := inf.TypeFile
@@ -124,6 +127,7 @@ func (x *XMLReader) UnzipFiles(msgs <-chan amqp.Delivery, forever chan bool, con
 							log.Printf("Не могу распознать слова - %v", err)
 						}
 						if matched {
+							typeFile = x.AddToDatabase(ost, typeFile, inf, hash)
 							x.amq.PublishSend(config, ost, "Notifications223OpenFile", zipFile.Extra, id, ost.Name(), inf.Fullpath)
 						} else {
 							pattern := ".+Protocol"
@@ -134,10 +138,11 @@ func (x *XMLReader) UnzipFiles(msgs <-chan amqp.Delivery, forever chan bool, con
 							}
 							if matched {
 								x.amq.PublishSend(config, ost, "Protocols223OpenFile", zipFile.Extra, id, ost.Name(), inf.Fullpath)
+								typeFile = x.AddToDatabase(ost, typeFile, inf, hash)
 							} else {
 								x.amq.PublishSend(config, ost, "Not choose", zipFile.Extra, id, ost.Name(), inf.Fullpath)
 							}
-							x.db.CreateInfoFile(ost, inf.Region, hash, inf.Fullpath, inf.TypeFile, inf.TypeFile)
+							typeFile = x.AddToDatabase(ost, typeFile, inf, hash)
 						}
 					}
 				}
@@ -145,8 +150,39 @@ func (x *XMLReader) UnzipFiles(msgs <-chan amqp.Delivery, forever chan bool, con
 		}
 	}()
 
-	log.Printf("[*] Ждем сообщений. Для вызода нажмите CTRL+C")
+	log.Printf("[*] Ждем сообщений в %s очередь. Для вызода нажмите CTRL+C", typeFile)
 	<-forever
+}
+
+// AddToDatabase Добавляет запись файла
+func (x *XMLReader) AddToDatabase(ost os.FileInfo, typeFile string, inf InformationFile, hash string) string {
+	ext := filepath.Ext(ost.Name())
+
+	var fileType models.FileType
+	x.db.Database.Table("FilesTypes").Where("ft_ext = ?", ext).Find(&fileType)
+
+	var sr models.SourceResources
+	typeFile = strings.ToLower(typeFile)
+	if err := x.db.Database.Table("SourceResources").Where("sr_name = ?", typeFile).Find(&sr).Error; err != nil {
+		log.Fatalf("Не могу определить Resource - %v", err)
+	}
+
+	var gf models.SourceRegions
+	x.db.Database.Table("SourceRegions").Where("r_name = ?", inf.Region).Find(&gf)
+
+	var f models.File
+	f.TName = ost.Name()
+	f.TArea = gf.RID
+	f.TType = fileType.FTID
+	f.THash = hash
+	f.TSize = ost.Size()
+	f.CreatedAt = time.Now()
+	f.TDateCreateFromSource = ost.ModTime()
+	f.TDateLastCheck = time.Now()
+	f.TFullpath = inf.Fullpath
+	f.TSourceResources = sr.SRID
+	x.db.Database.Table("Files").Create(&f)
+	return typeFile
 }
 
 func readZipFile(zf *zip.File) ([]byte, error) {
