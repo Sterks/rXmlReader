@@ -9,7 +9,6 @@ import (
 	"io/ioutil"
 	"os"
 	"path/filepath"
-	"regexp"
 	"strconv"
 	"strings"
 	"time"
@@ -56,7 +55,7 @@ func NewXMLReader(config *config.Config) *XMLReader {
 
 // OpenDatabase ...
 func (x *XMLReader) Start(config *config.Config) *XMLReader {
-	x.db.OpenDatabase()
+	x.db.OpenDatabase(x.config.Postgres.Host, x.config.Postgres.Port, x.config.Postgres.User, x.config.Postgres.Password, x.config.Postgres.DBName)
 	return x
 }
 
@@ -74,9 +73,10 @@ func (x *XMLReader) UnzipFiles(msgs <-chan amqp.Delivery, forever chan bool, con
 
 			zipReader, err := zip.NewReader(bytes.NewReader(body), int64(len(body)))
 			if err != nil {
-				f, err2 := os.Create("logFile")
+				// f, err2 := os.Create("logFile")
+				f, err2 := os.OpenFile("logFile", os.O_APPEND|os.O_WRONLY, 0644)
 				defer f.Close()
-				g := fmt.Sprintf("Не могу прочитать файл - %v - %v", err, inf.NameFile)
+				g := fmt.Sprintf("Не могу прочитать файл - %v - %v\n", err, inf.NameFile)
 				f.WriteString(g)
 				log.Printf("Не могу прочитать содержимое файла - %v", err)
 				if err2 != nil {
@@ -119,31 +119,15 @@ func (x *XMLReader) UnzipFiles(msgs <-chan amqp.Delivery, forever chan bool, con
 					} else if inf.TypeFile == "protocols44" {
 						x.amq.PublishSend(config, ost, "Protocols44OpenFile", zzz, id, ost.Name(), inf.Fullpath)
 						typeFile = x.AddToDatabase(ost, typeFile, inf, hash)
+					} else if inf.TypeFile == "notifications223" {
+						typeFile = x.AddToDatabase(ost, typeFile, inf, hash)
+						x.amq.PublishSend(config, ost, "Notifications223OpenFile", zipFile.Extra, id, ost.Name(), inf.Fullpath)
+					} else if inf.TypeFile == "protocols223" {
+						x.amq.PublishSend(config, ost, "Protocols223OpenFile", zipFile.Extra, id, ost.Name(), inf.Fullpath)
+						typeFile = x.AddToDatabase(ost, typeFile, inf, hash)
 					} else {
-						pattern := ".+Notice"
-						reg := inf.TypeFile
-						matched, err := regexp.MatchString(pattern, reg)
-						if err != nil {
-							log.Printf("Не могу распознать слова - %v", err)
-						}
-						if matched {
-							typeFile = x.AddToDatabase(ost, typeFile, inf, hash)
-							x.amq.PublishSend(config, ost, "Notifications223OpenFile", zipFile.Extra, id, ost.Name(), inf.Fullpath)
-						} else {
-							pattern := ".+Protocol"
-							reg := inf.TypeFile
-							matched, err := regexp.MatchString(pattern, reg)
-							if err != nil {
-								log.Printf("Не могу распознать слова - %v", err)
-							}
-							if matched {
-								x.amq.PublishSend(config, ost, "Protocols223OpenFile", zipFile.Extra, id, ost.Name(), inf.Fullpath)
-								typeFile = x.AddToDatabase(ost, typeFile, inf, hash)
-							} else {
-								x.amq.PublishSend(config, ost, "Not choose", zipFile.Extra, id, ost.Name(), inf.Fullpath)
-							}
-							typeFile = x.AddToDatabase(ost, typeFile, inf, hash)
-						}
+						x.amq.PublishSend(config, ost, "Not choose", zipFile.Extra, id, ost.Name(), inf.Fullpath)
+						typeFile = x.AddToDatabase(ost, typeFile, inf, hash)
 					}
 				}
 			}

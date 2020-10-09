@@ -11,4 +11,11 @@ notifications = 5
 protocols = 8
 
 [Rabbit]
-connection_rabbit = "amqp://guest:guest@localhost:5672/"
+connection_rabbit = "amqp://guest:guest@rabbitmq:5672/"
+
+[Postgres]
+host     = "Postgres"
+port     = 5432
+user     = "user_ro"
+password = "4r2w3e1q"
+dbname   = "freader"

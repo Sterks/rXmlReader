@@ -1,6 +1,8 @@
 package main
 
 import (
+	"time"
+
 	"github.com/BurntSushi/toml"
 	"github.com/Sterks/rXmlReader/config"
 	"github.com/Sterks/rXmlReader/rabbit"
@@ -10,7 +12,7 @@ import (
 )
 
 const (
-	host     = "localhost"
+	host     = "Postgres"
 	port     = 5432
 	user     = "user_ro"
 	password = "4r2w3e1q"
@@ -26,6 +28,8 @@ func init() {
 }
 
 func main() {
+
+	time.Sleep(30 * time.Second)
 	// TODO Перенести конфиг в корень
 	configPath := "config/config.prod.toml"
 	config := config.NewConf()

@@ -12,6 +12,16 @@ type Config struct {
 	Directory    Directory
 	Tasks        Tasks
 	Rabbit       Rabbit
+	Postgres     Postgres
+}
+
+// Postgres ...
+type Postgres struct {
+	Host     string `toml:"host"`
+	Port     int    `toml:"port"`
+	User     string `toml:"user"`
+	Password string `toml:"password"`
+	DBName   string `toml:"dbname"`
 }
 
 //MainSettings ...
@@ -43,6 +53,7 @@ func NewConf() *Config {
 		MainSettings: MainSettings{},
 		Directory:    Directory{},
 		Tasks:        Tasks{},
+		Postgres:     Postgres{},
 	}
 }
 
