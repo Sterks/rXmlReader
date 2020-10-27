@@ -131,6 +131,11 @@ func (x *XMLReader) UnzipFiles(msgs <-chan amqp.Delivery, forever chan bool, con
 					}
 				}
 			}
+			if err := d.Ack(false); err != nil {
+				log.Printf("Error acknowledging message : %s", err)
+			} else {
+				log.Printf("Acknowledged message - %v", inf.NameFile)
+			}
 		}
 	}()
 
