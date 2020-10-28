@@ -25,13 +25,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38ad009b-507c-49d3-9a60-fdbdee08a734" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/rXmlReader.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/rXmlReader.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbit/consumer.go" beforeDir="false" afterPath="$PROJECT_DIR$/rabbit/consumer.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/XmlReader.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/XmlReader.go" afterDir="false" />
-    </list>
+    <list default="true" id="38ad009b-507c-49d3-9a60-fdbdee08a734" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,8 +40,38 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1603794167" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="changeForQueue" />
+                    <option name="lastUsedInstant" value="1603794166" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
+  </component>
+  <component name="KubernetesApiPersistence">
+    <option name="context" value="docker-desktop" />
+    <option name="namespace" value="default" />
   </component>
   <component name="ProjectId" id="1eXXXJBreycQyM242zfmGOofV1A" />
   <component name="ProjectLevelVcsManager">
@@ -68,7 +92,7 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../rXML" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs.mocha.mocha_node_package_dir" value="" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="sshConsole" />
@@ -140,6 +164,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
