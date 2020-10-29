@@ -7,6 +7,7 @@ import (
 	"github.com/Sterks/rXmlReader/services"
 	"github.com/sirupsen/logrus"
 	log "github.com/sirupsen/logrus"
+	"os"
 )
 
 func init() {
@@ -21,7 +22,13 @@ func main() {
 
 	//time.Sleep(30 * time.Second)
 	// TODO Перенести конфиг в корень
-	configPath := "config/config.toml"
+
+	configPath := ""
+	if os.Getenv("application") == "production" {
+		configPath = "config/config.prod.toml"
+	} else {
+		configPath = "config/config.toml"
+	}
 	config := config.NewConf()
 	_, err := toml.DecodeFile(configPath, &config)
 	if err != nil {
