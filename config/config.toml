@@ -4,7 +4,18 @@ log_level = "debug"
 
 [Directory]
 root_path = "/fcs_regions"
+main_folder = "F:/Files"
 
 [Tasks]
-notifications = 3
-protocols = 1
+notifications = 5
+protocols = 8
+
+[Rabbit]
+connection_rabbit = "amqp://guest:guest@localhost:5672/"
+
+[Postgres]
+host     = "localhost"
+port     = 5432
+user     = "user_ro"
+password = "4r2w3e1q"
+dbname   = "freader"

@@ -81,8 +81,10 @@ func (x *XMLReader) UnzipFiles(msgs <-chan amqp.Delivery, forever chan bool, con
 				log.Printf("Не могу прочитать содержимое файла - %v", err)
 				if err2 != nil {
 					log.Printf("Не могу записать в лог - %v", err)
+
 				}
-				continue
+				d.Ack(false)
+				return
 			}
 
 			// Read all the files from zip archive

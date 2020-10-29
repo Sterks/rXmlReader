@@ -1,8 +1,6 @@
 package main
 
 import (
-	"time"
-
 	"github.com/BurntSushi/toml"
 	"github.com/Sterks/rXmlReader/config"
 	"github.com/Sterks/rXmlReader/rabbit"
@@ -21,9 +19,9 @@ func init() {
 
 func main() {
 
-	time.Sleep(30 * time.Second)
+	//time.Sleep(30 * time.Second)
 	// TODO Перенести конфиг в корень
-	configPath := "config/config.prod.toml"
+	configPath := "config/config.toml"
 	config := config.NewConf()
 	_, err := toml.DecodeFile(configPath, &config)
 	if err != nil {

@@ -62,13 +62,5 @@ func (c *ConsumerMQ) ConsumerMQNow(config *config.Config, nameQueue string) <-ch
 	if err != nil {
 		log.Fatalf("connection.consumer - %s", err)
 	}
-
-	stopChan := make(chan bool)
-
-	go func() {
-
-	}()
-
-	<-stopChan
 	return msqs
 }
