@@ -8,6 +8,7 @@ import (
 	"github.com/sirupsen/logrus"
 	log "github.com/sirupsen/logrus"
 	"os"
+	"time"
 )
 
 func init() {
@@ -20,11 +21,12 @@ func init() {
 
 func main() {
 
-	//time.Sleep(30 * time.Second)
+	time.Sleep(30 * time.Second)
 	// TODO Перенести конфиг в корень
 
 	configPath := ""
-	if os.Getenv("application") == "production" {
+	getenv := os.Getenv("APPLICATION")
+	if getenv == "production" {
 		configPath = "config/config.prod.toml"
 	} else {
 		configPath = "config/config.toml"

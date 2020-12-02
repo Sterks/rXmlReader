@@ -76,15 +76,18 @@ func (x *XMLReader) UnzipFiles(msgs <-chan amqp.Delivery, forever chan bool, con
 				// f, err2 := os.Create("logFile")
 				f, err2 := os.OpenFile("logFile", os.O_APPEND|os.O_WRONLY, 0644)
 				defer f.Close()
-				g := fmt.Sprintf("Не могу прочитать файл - %v - %v\n", err, inf.NameFile)
+				g := fmt.Sprintf("Не могу прочитать файл - %v - %v - %v\n", time.Now().Format(time.RFC1123), err, inf.NameFile)
 				f.WriteString(g)
-				log.Printf("Не могу прочитать содержимое файла - %v", err)
+				log.Errorf("Не могу прочитать содержимое файла - %v", err)
 				if err2 != nil {
 					log.Printf("Не могу записать в лог - %v", err)
-
 				}
-				d.Ack(false)
-				return
+				if err3 := d.Ack(false); err3 != nil {
+					log.Printf("Error acknowledging message : %s", err3)
+				} else {
+					log.Printf("Acknowledged message - %v", inf.NameFile)
+				}
+				continue
 			}
 
 			// Read all the files from zip archive
@@ -123,12 +126,12 @@ func (x *XMLReader) UnzipFiles(msgs <-chan amqp.Delivery, forever chan bool, con
 						typeFile = x.AddToDatabase(ost, typeFile, inf, hash)
 					} else if inf.TypeFile == "notifications223" {
 						typeFile = x.AddToDatabase(ost, typeFile, inf, hash)
-						x.amq.PublishSend(config, ost, "Notifications223OpenFile", zipFile.Extra, id, ost.Name(), inf.Fullpath)
+						x.amq.PublishSend(config, ost, "Notifications223OpenFile", zzz, id, ost.Name(), inf.Fullpath)
 					} else if inf.TypeFile == "protocols223" {
-						x.amq.PublishSend(config, ost, "Protocols223OpenFile", zipFile.Extra, id, ost.Name(), inf.Fullpath)
+						x.amq.PublishSend(config, ost, "Protocols223OpenFile", zzz, id, ost.Name(), inf.Fullpath)
 						typeFile = x.AddToDatabase(ost, typeFile, inf, hash)
 					} else {
-						x.amq.PublishSend(config, ost, "Not choose", zipFile.Extra, id, ost.Name(), inf.Fullpath)
+						x.amq.PublishSend(config, ost, "Not choose", zzz, id, ost.Name(), inf.Fullpath)
 						typeFile = x.AddToDatabase(ost, typeFile, inf, hash)
 					}
 				}

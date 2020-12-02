@@ -25,118 +25,114 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38ad009b-507c-49d3-9a60-fdbdee08a734" name="Default Changelist" comment="" />
+    <list default="true" id="bf6e8fbf-1ab7-4817-bd6f-69bb439b9ab9" name="Default Changelist" comment="проверка окружения">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/rXmlReader.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/rXmlReader.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logFile" beforeDir="false" afterPath="$PROJECT_DIR$/logFile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/XmlReader.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/XmlReader.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DockerExecCommand">
+    <ExecCommand>
+      <option name="command" value="sh" />
+      <option name="imageId" value="sha256:ba0c2ff8d3620c0910832424efef02787214013b1c5b1d9dc9d87d638e2ceb71" />
+    </ExecCommand>
+    <ExecCommand>
+      <option name="command" value="sh" />
+      <option name="imageId" value="sha256:ec307697f5621bf27931e6f85675cfb7f3054bdd2503821360a0af8930db1a6b" />
+    </ExecCommand>
+  </component>
   <component name="GOROOT" path="C:\Go" />
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="change_queue" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitToolBoxStore">
-    <option name="projectConfigVersion" value="2" />
-    <option name="recentBranches">
-      <RecentBranches>
-        <option name="branchesForRepo">
-          <list>
-            <RecentBranchesForRepo>
-              <option name="branches">
-                <list>
-                  <RecentBranch>
-                    <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1603794167" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="changeForQueue" />
-                    <option name="lastUsedInstant" value="1603794166" />
-                  </RecentBranch>
-                </list>
-              </option>
-              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
-            </RecentBranchesForRepo>
-          </list>
-        </option>
-      </RecentBranches>
-    </option>
-  </component>
   <component name="GoLibraries">
     <option name="indexEntireGoPath" value="false" />
   </component>
-  <component name="KubernetesApiPersistence">
-    <option name="context" value="docker-desktop" />
-    <option name="namespace" value="default" />
-  </component>
-  <component name="ProjectId" id="1eXXXJBreycQyM242zfmGOofV1A" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="1jYG2Qhct43aq9oy4RBw6LzgYwQ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
-    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
-    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs.mocha.mocha_node_package_dir" value="" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="sshConsole" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../rXML" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager">
-    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Build.go build github.com/Sterks/rXmlReader">
+    <configuration name="go build github.com/Sterks/rXmlReader" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="rXmlReader" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <go_parameters value="-i" />
-      <kind value="FILE" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
       <filePath value="$PROJECT_DIR$/main.go" />
       <package value="github.com/Sterks/rXmlReader" />
-      <directory value="$PROJECT_DIR$/" />
+      <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
+    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build github.com/Sterks/rXmlReader" />
+        <item itemvalue="Docker.Dockerfile" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
-  <component name="SshConsoleOptionsProvider">
-    <option name="myEncoding" value="UTF-8" />
-    <option name="myConnectionType" value="NONE" />
-  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="38ad009b-507c-49d3-9a60-fdbdee08a734" name="Default Changelist" comment="" />
-      <created>1602236980881</created>
+      <changelist id="bf6e8fbf-1ab7-4817-bd6f-69bb439b9ab9" name="Default Changelist" comment="" />
+      <created>1603973406127</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1602236980881</updated>
+      <updated>1603973406127</updated>
     </task>
-    <task id="LOCAL-00001" summary="Последние обновления">
-      <created>1602237227754</created>
+    <task id="LOCAL-00001" summary="Удаление констранты">
+      <created>1603973648444</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1602237227754</updated>
+      <updated>1603973648444</updated>
     </task>
-    <task id="LOCAL-00002" summary="Добавление в Gitignore">
-      <created>1602240318350</created>
+    <task id="LOCAL-00002" summary="Рабочая версия до рефакторинга">
+      <created>1603976859689</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1602240318350</updated>
+      <updated>1603976859689</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="проверка окружения">
+      <created>1603980676813</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1603980676813</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,118 +163,66 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Последние обновления" />
-    <MESSAGE value="Добавление в Gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавление в Gitignore" />
+    <MESSAGE value="Удаление констранты" />
+    <MESSAGE value="Рабочая версия до рефакторинга" />
+    <MESSAGE value="проверка окружения" />
+    <option name="LAST_COMMIT_MESSAGE" value="проверка окружения" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
-    <state x="2142" y="175" key="#Deployment" timestamp="1594472100522">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="2142" y="175" key="#Deployment/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594472100522" />
-    <state x="2259" y="241" width="855" height="558" key="#Docker" timestamp="1594472079697">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="2259" y="241" width="855" height="558" key="#Docker/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594472079697" />
-    <state x="1947" y="264" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594479593232">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594478933384" />
-    <state x="1947" y="264" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594479593232" />
-    <state x="664" y="140" key="#go_build_rXmlReader" timestamp="1594479432351">
+    <state width="708" height="646" key="DebuggerActiveHint" timestamp="1605012780810">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="664" y="140" key="#go_build_rXmlReader/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1594479432351" />
-    <state x="703" y="355" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1602239971871">
+    <state width="708" height="646" key="DebuggerActiveHint/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605012780810" />
+    <state x="1340" y="242" key="FileChooserDialogImpl" timestamp="1606889930500">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="703" y="355" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602239971871" />
-    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1602240233274">
+    <state x="1340" y="242" key="FileChooserDialogImpl/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606889930500" />
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom" timestamp="1606387655034">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602240233274" />
-    <state x="2718" y="388" key="DockerComposeFileDialog" timestamp="1594471902503">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="2718" y="388" key="DockerComposeFileDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594471902503" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1602240083896">
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606387655034" />
+    <state width="1877" height="275" key="GridCell.Tab.0.center" timestamp="1606387655033">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602240083896" />
-    <state x="2660" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594479505125" />
-    <state width="1877" height="340" key="GridCell.Tab.0.bottom" timestamp="1597927109789">
+    <state width="1877" height="275" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606387655033" />
+    <state width="1877" height="275" key="GridCell.Tab.0.left" timestamp="1606387655033">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="340" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597927109789" />
-    <state width="1877" height="340" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1597856010997" />
-    <state width="1877" height="275" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1594486856491" />
-    <state width="1877" height="340" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1594488318792" />
-    <state width="1877" height="340" key="GridCell.Tab.0.center" timestamp="1597927109789">
+    <state width="1877" height="275" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606387655033" />
+    <state width="1877" height="275" key="GridCell.Tab.0.right" timestamp="1606387655033">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="340" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597927109789" />
-    <state width="1877" height="340" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1597856010997" />
-    <state width="1877" height="275" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1594486856491" />
-    <state width="1877" height="340" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1594488318792" />
-    <state width="1877" height="340" key="GridCell.Tab.0.left" timestamp="1597927109789">
+    <state width="1877" height="275" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606387655033" />
+    <state width="1877" height="280" key="GridCell.Tab.1.bottom" timestamp="1605180151632">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="340" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597927109789" />
-    <state width="1877" height="340" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1597856010997" />
-    <state width="1877" height="275" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1594486856491" />
-    <state width="1877" height="340" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1594488318792" />
-    <state width="1877" height="340" key="GridCell.Tab.0.right" timestamp="1597927109789">
+    <state width="1877" height="280" key="GridCell.Tab.1.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605180151632" />
+    <state width="1877" height="280" key="GridCell.Tab.1.center" timestamp="1605180151632">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="340" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597927109789" />
-    <state width="1877" height="340" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1597856010997" />
-    <state width="1877" height="275" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1594486856491" />
-    <state width="1877" height="340" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1594488318792" />
-    <state width="1877" height="340" key="GridCell.Tab.1.bottom" timestamp="1597927109790">
+    <state width="1877" height="280" key="GridCell.Tab.1.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605180151632" />
+    <state width="1877" height="280" key="GridCell.Tab.1.left" timestamp="1605180151631">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="340" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597927109790" />
-    <state width="1877" height="340" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594620965568" />
-    <state width="1877" height="340" key="GridCell.Tab.1.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1594486853632" />
-    <state width="1877" height="340" key="GridCell.Tab.1.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1594488308423" />
-    <state width="1877" height="340" key="GridCell.Tab.1.center" timestamp="1597927109790">
+    <state width="1877" height="280" key="GridCell.Tab.1.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605180151631" />
+    <state width="1877" height="280" key="GridCell.Tab.1.right" timestamp="1605180151632">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="340" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597927109790" />
-    <state width="1877" height="340" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594620965568" />
-    <state width="1877" height="340" key="GridCell.Tab.1.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1594486853632" />
-    <state width="1877" height="340" key="GridCell.Tab.1.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1594488308423" />
-    <state width="1877" height="340" key="GridCell.Tab.1.left" timestamp="1597927109789">
+    <state width="1877" height="280" key="GridCell.Tab.1.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605180151632" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1606889931673">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="340" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597927109789" />
-    <state width="1877" height="340" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594620965568" />
-    <state width="1877" height="340" key="GridCell.Tab.1.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1594486853632" />
-    <state width="1877" height="340" key="GridCell.Tab.1.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1594488308423" />
-    <state width="1877" height="340" key="GridCell.Tab.1.right" timestamp="1597927109790">
+    <state x="461" y="165" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1606889931673" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1603977247407">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="340" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1597927109790" />
-    <state width="1877" height="340" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594620965568" />
-    <state width="1877" height="340" key="GridCell.Tab.1.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1594486853632" />
-    <state width="1877" height="340" key="GridCell.Tab.1.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1594488308423" />
-    <state x="758" y="212" key="SettingsEditor" timestamp="1602248290536">
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603977247407" />
+    <state x="668" y="237" width="924" height="566" key="find.popup" timestamp="1604657819886">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="758" y="212" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602248290536" />
-    <state x="2570" y="155" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594472052151" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1602240020718">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602240020718" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1602240213177">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602240213177" />
-    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1594472001855" />
+    <state x="668" y="237" width="924" height="566" key="find.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604657819886" />
   </component>
 </project>
